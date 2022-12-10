@@ -8,8 +8,7 @@ from flask import current_app as app
 @app.route('/')
 @app.route('/index')
 def index():
-    # return render_template('index.html', title="Homepage - goFarm")
-    return "aaa"
+    return render_template('index.html', title="Homepage - myyHealth")
 
 @app.route('/testapi')
 def api():
