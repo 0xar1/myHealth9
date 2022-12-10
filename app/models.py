@@ -27,3 +27,9 @@ def load_user(uid):
     return User.query.get(int(uid))
 
 
+class experience(db.Model):
+    exp_id = db.Column(db.Integer, primary_key = True)
+    author_id = db.Column(db.Integer, db.ForeignKey('user.uid'))
+    buyerName = db.Column(db.String(50))
+    likes = db.Column(db.Integer,default = 0)
+    dislikes = db.Column(db.Integer,default = 0)
