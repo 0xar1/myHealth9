@@ -83,7 +83,7 @@ def stories():
 @app.route('/dashboard')
 def dashboard():
     if current_user.is_authenticated:
-        return render_template('dashboard.html')
+        return render_template('dash.html',username=current_user.username)
     return redirect(url_for('signin'))
 
 @app.route('/writestory')
@@ -97,7 +97,9 @@ def storymofo():
 ###########################
 ###########################
 ###########################
-ROOMS = ["lounge", "news", "games", "coding"]
+# ROOMS = ["lounge", "news", "games", "coding"]
+ROOMS = ["lounge","Share your Experience", "Openup", "Discuss what entertain us"]
+
 
 @app.route("/chat", methods=['GET', 'POST'])
 def chat():
