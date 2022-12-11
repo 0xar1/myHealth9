@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login.css')}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <style>
+        body{
+            background: url("{{url_for('static', filename='assets/images/background7.jpg')}}");
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form method="POST">
+            <center><h1>Signin</h1></center>
+            
+            {{form.hidden_tag()}}
+            <label class="label">Email</label>
+            {{ form.email(placeholder='Email')}}
+            <label class="label">Password</label>
+            {{form.password(placeholder='Set a password.')}}
+            <br><br>
+           
+            {{form.submit}}
+            <br><br><br><br>
+            <p class="cau-cuoi">Don't have an account? <a href="/signin">Sign up</a></p>
+            <br><br>
+        </form>
+    </div>
+</body>
+</html>

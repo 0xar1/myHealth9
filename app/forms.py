@@ -3,7 +3,6 @@ from wtforms import BooleanField, PasswordField, StringField,DateTimeField, Subm
 from wtforms_sqlalchemy.fields import QuerySelectField
 from wtforms.fields import DateTimeLocalField
 from wtforms.validators import Email, InputRequired, Length, EqualTo
-from .models import Crops
 from datetime import datetime
 
 class LoginForm(FlaskForm):
@@ -12,11 +11,11 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
-class RegisterForm(FlaskForm):   
-    fullname = StringField('Username',validators=[InputRequired(), Length(max=50)]) 
+class RegisterForm(FlaskForm):
+    username = StringField('Username',validators=[InputRequired(), Length(max=50)]) 
+    fullname = StringField('Full Name',validators=[InputRequired(), Length(max=50)]) 
     email = StringField('Email', validators=[InputRequired(), Email(message='Invalid email'), Length(min=6,max=50)])
     password = PasswordField('Password', validators=[InputRequired(), Length(max=50)])
     confirm = PasswordField('Confirm Password',validators=[InputRequired()])
-    accept_tos = BooleanField('I accept the User Agreement', validators=[InputRequired()])
     submit = SubmitField('Register')
 

@@ -26,7 +26,7 @@ def create_app(debug=False):
     # mail.init_app(app)
     with app.app_context():
         from . import routes
-    #     app.register_blueprint(auth)
+        # app.register_blueprint(auth)
     #     app.register_blueprint(auctions)
 
     from .models import User
