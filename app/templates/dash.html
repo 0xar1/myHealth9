@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard Builder</title>
+    <title>Psykh - Dashboard</title>
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/material-dashboard-2-builder/v3.0.4/assets/css/nucleo-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/material-dashboard-2-builder/v3.0.4/assets/css/nucleo-svg.css">
@@ -16,8 +16,8 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="javascript:;" target="_blank">
-                <img src="https://demos.creative-tim.com/material-dashboard/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span>
+                <img src="{{url_for('static', filename='assets/images/logo.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Psykh - Dashboard</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
@@ -32,11 +32,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="javascript:;">
+                    <a class="nav-link text-white " href="/chat">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">table_view</i>
+                            <i class="material-icons opacity-10">face</i>
                         </div>
-                        <span class="nav-link-text ms-1">Tables</span>
+                        <span class="nav-link-text ms-1">Community</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -44,7 +44,7 @@
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">receipt_long</i>
                         </div>
-                        <span class="nav-link-text ms-1">Billing</span>
+                        <span class="nav-link-text ms-1">Connect to Doctors</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -52,7 +52,7 @@
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">view_in_ar</i>
                         </div>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
+                        <span class="nav-link-text ms-1">Audio Meditaions</span>
                     </a>
                 </li>
             
@@ -68,20 +68,13 @@
                         <span class="nav-link-text ms-1">Profile</span>
                     </a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link text-white " href="javascript:;">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">login</i>
+                            <i class="material-icons opacity-10">logout</i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="javascript:;">
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">assignment</i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
+                        <span class="nav-link-text ms-1">Log Out</span>
                     </a>
                 </li>
             </ul>
@@ -180,7 +173,7 @@
                                     <h5 class="mt-2">Connect to Medical Professionals</h5>
                                     <p class="mb-3">Ask a pyschiatrist/Pyschologist online and get your health queries. Connect with the top doctors for consultations, audio or video call.</p>
                                     <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-warning icon-move-right">
-                                        View journey
+                                        SEE DETAILS
                                         <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -210,7 +203,7 @@
                                 </div>
                                 <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
                                     <h5 class="mt-2">Audio Meditaions</h5>
-                                    <p class="mb-3">Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out. It’s like a little kid, a little boy.</p>
+                                    <p class="mb-3">Audio guided medtation exercises are a component of Mindfulness-Based Cignitive Therapy(MBCT) that might be combined with therapy sessions.</p>
                                     <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-dark icon-move-right">
                                         Check out more
                                         <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
@@ -227,8 +220,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
-                                    <h5 class="mt-2">Premium support</h5>
-                                    <p class="mb-3">Pink is obviously a better color. Everyone’s born confident, and everything’s taken away from you matters is the people who are sparked by it follow their dreams, too.</p>
+                                    <h5 class="mt-2">Yoga Sessions</h5>
+                                    <p class="mb-3">Yoga is said to have a calming effect on the mind and body so there are some asanas that could help with mental peace.</p>
                                     <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-info icon-move-right">
                                         See all
                                         <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
@@ -245,10 +238,10 @@
                                     </div>
                                 </div>
                                 <div class="card-body border-radius-lg position-relative overflow-hidden pb-4">
-                                    <h5 class="mt-2">Design tools</h5>
-                                    <p class="mb-3">Constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves, find the meaning and actualize our dreams the position.</p>
-                                    <a href="javascript:;" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-danger icon-move-right">
-                                        Find story
+                                    <h5 class="mt-2">Self Assessment</h5>
+                                    <p class="mb-3">Online screening is one of the quickest and easiest ways to determine whether you are experiencing some symptoms.</p>
+                                    <a href="https://screening.mhanational.org/screening-tools/" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-danger icon-move-right">
+                                        Take test
                                         <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -258,76 +251,7 @@
                     </div>
                 </div>
             </section>
-            <div class="row removable">
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">weekend</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                <h4 class="mb-0">$53k</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Today's Users</p>
-                                <h4 class="mb-0">2,300</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">New Clients</p>
-                                <h4 class="mb-0">3,462</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card mb-4">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">weekend</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Sales</p>
-                                <h4 class="mb-0">$103,430</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
 
         
