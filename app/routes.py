@@ -12,7 +12,7 @@ from flask_socketio import SocketIO, join_room, leave_room, send
 
 
 #defnitions
-website_name = "name-here"
+website_name = "Psykh"
 landing_page_text = "How are you feeling today?"
 
 @app.route('/')
